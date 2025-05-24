@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
 		<title>Sudoku</title>
 		<style>
 html, body, #canvas {
@@ -13,13 +13,18 @@ html, body, #canvas {
 
 body {
 	color: white;
-	background-color: black;
+	background-color: green;
 	overflow: hidden;
 	touch-action: none;
 }
 
+/* Okay lets set our project setting to scale differently & when we get them black eges we'll crop them out */
+
 #canvas {
 	display: block;
+	/* clip-path: inset(0px 50px 900px 50px); height: 300px; overflow: hidden; */
+	/* overflow-y: scroll;
+	transform: scale(1); transform-origin: top; height: 200px; */
 }
 
 #canvas:focus {
@@ -91,7 +96,7 @@ body {
 }
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
-<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+		<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	</head>
 	<body>
